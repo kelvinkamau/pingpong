@@ -7,13 +7,16 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 
-public class MainActivity extends Activity {
+import com.google.firebase.analytics.FirebaseAnalytics;
 
+public class MainActivity extends Activity {
+    private FirebaseAnalytics mFirebaseAnalytics;
     private int fps = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
         uiOptions |= View.SYSTEM_UI_FLAG_FULLSCREEN;
