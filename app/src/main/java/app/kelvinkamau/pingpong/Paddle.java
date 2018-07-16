@@ -19,7 +19,7 @@ public class Paddle extends DrawObject {
         this.player = player;
 
         paint = new Paint();
-        paint.setColor(Color.BLUE);
+        paint.setColor(Color.rgb(255, 87, 51));
     }
 
     @Override
